@@ -3,7 +3,7 @@
   <body>
     <div class="body-container min-vh-100">
       <h1 class="text-center my-3 mb-5">Create a New Blog Post</h1>
-      <form class="form-outline mb-4 text-center my-5">
+      <form class="form-outline mb-4 text-center my-5" method="POST" action="#">
         <label
           for="title"
           class="form-label form-control border-0 bg-transparent"
@@ -31,12 +31,13 @@
           class="form-label form-control border-0 bg-transparent"
           >Body</label
         >
-        <input
+        <textarea
           class="w-50 mb-5 p-5 rounded"
           type="text"
           id="body"
           name="body"
-        />
+        ></textarea>
+        <a href="#" class="rounded btn btn-primary w-50 mb-5">Details</a>
       </form>
     </div>
     <%- include('./partials/footer.ejs')%>
