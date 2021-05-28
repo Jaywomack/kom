@@ -26,6 +26,10 @@ app.get('/blog', (req, res) => {
   res.render('blogHome');
 });
 
+app.get('/shop', (req, res) => {
+  res.render('shop');
+});
+
 app.get('/create', (req, res) => {
   res.render('create');
 });
