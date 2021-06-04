@@ -25,8 +25,8 @@ let connection = mongoose.connection;
 app.get('/', (req, res) => {
   blogSchema.find((err, data) => {
     if (data) {
-      jsonData = JSON.stringify(data);
-      res.render('index', { data: jsonData });
+      // jsonData = JSON.stringify(data);
+      res.render('index', { data: data });
       console.log(data);
     } else {
       console.log(err);
