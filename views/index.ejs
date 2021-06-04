@@ -2,6 +2,11 @@
   <body>
     <%- include('./partials/head.ejs')%> <%- include('./partials/nav.ejs')%>
     <div class="body-container min-vh-100 border-transparent">
+      <p><%=data%></p>
+      <% for (var i =0; i <=data.length; i++ ) { %>
+      <br />
+      <%= data.i %> <%# will output the numbers 1-10 %> <% } %>
+
       <div class="container masulinity-container my-3 py-5">
         <h1 class="display-3 my-5">Positive Male Masculinity</h1>
         <hr class="w-100" />

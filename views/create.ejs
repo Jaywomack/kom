@@ -1,9 +1,13 @@
 <html lang="en">
-  <%- include('./partials/head.ejs')%> <%- include('./partials/nav.ejs')%>
+  <%- include('./partials/head.ejs')%> <button%- include('./partials/nav.ejs')%>
   <body>
     <div class="body-container min-vh-100">
       <h1 class="text-center my-3 mb-5">Create a New Blog Post</h1>
-      <form class="form-outline mb-4 text-center my-5" method="POST" action="#">
+      <form
+        class="form-outline mb-4 text-center my-5"
+        method="POST"
+        action="/blogs"
+      >
         <label
           for="title"
           class="form-label form-control border-0 bg-transparent"
@@ -14,6 +18,7 @@
           type="text"
           id="title"
           name="title"
+          required
         />
         <label
           for="snippet"
@@ -25,6 +30,7 @@
           type="text"
           id="snippet"
           name="snippet"
+          required
         />
         <label
           for="body"
@@ -36,8 +42,11 @@
           type="text"
           id="body"
           name="body"
+          required
         ></textarea>
-        <a href="#" class="rounded btn btn-primary w-50 mb-5">Details</a>
+        <button type="submit" class="rounded btn btn-primary w-50 mb-5">
+          Post Blog
+        </button>
       </form>
     </div>
     <%- include('./partials/footer.ejs')%>
